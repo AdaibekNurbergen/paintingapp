@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/182883edf6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рисовалка</title>
+</head>
+    <body>
+            <p>
+            <a href="" download="my_painting.png"><i class="fa-solid fa-download"><strong>Загрузить рисунок </strong></i></a> 
+            <i id="eraser" class="fa-solid fa-eraser"><strong>Очистить</strong></i> </p>
+            <div id="pen-tools" class="pen-tools"> 
+                <div id="drawing-colors" class="drawing-colors">
+                    <div class="color-circle active" data-color="hotpink" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="orange" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="red" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="yellow" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="black" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="white" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="green" onclick="selectColor(this)"></div>
+                </div>
+                
+                <div id="favContainer"> <label for="favcolor">Выберите цвет:</label>
+                    <input type="color" name="favcolor" id="favcolor" value="#ff0000" onchange="favColor(this)"></div>
+                    <div id="pen-size">
+                        <label for="pen-size"><i class="fa-solid fa-pencil"></i>Размер кисти</label>
+                        <input type="range" name="pen-size" id="pen-size" value="10" step="5" min="5" max="60" onchange="penSizeChange(this.value)">
+                    </div>
+            </div>
+            <div class="board">
+                <canvas width="800px" height="590"></canvas>
+            </div>
+         <script src="/script.js"></script>       
+    </body>
+</html>
